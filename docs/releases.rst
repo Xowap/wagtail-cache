@@ -3,6 +3,14 @@ Release Notes
 =============
 
 
+3.0.1
+=====
+
+* Support Django 6.1 and Wagtail 8.
+
+* Bug fix: Django 6.1 removed ``django.utils.cache.cc_delim_re`` (as part of the CVE-2026-48587 hardening). The ``Vary`` header is now parsed with ``django.utils.http.split_header_value``, with an equivalent fallback for Django < 6.1.
+
+
 3.0.0
 =====
 
